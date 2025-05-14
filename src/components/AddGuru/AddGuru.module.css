@@ -1,0 +1,142 @@
+/* Wrapper utama untuk form */
+.formWrapper {
+    margin: 3rem 0 0 0;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #1995AD, #54c8e1); /* Gradasi biru */
+    border-radius: 1rem;
+    box-sizing: border-box;
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1); /* Bayangan halus */
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Judul Form */
+.title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Input dan textarea */
+.input {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 0.125rem solid #ccc;
+    border-radius: 0.75rem;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 100%;
+    background-color: #f3f4f6;
+    color: #333;
+    box-shadow: inset 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.1);
+}
+
+/* Efek saat input fokus */
+.input:focus {
+    border-color: #1995AD;
+    background-color: #fff;
+    box-shadow: 0 0 0.3125rem rgba(25, 149, 173, 0.5);
+}
+
+/* Tombol Submit */
+.button {
+    padding: 1rem;
+    font-size: 1.125rem;
+    background-color: #1995AD;
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 0.0625rem;
+}
+
+/* Hover dan aktif tombol */
+.button:hover {
+    background-color: #127b93;
+    transform: translateY(-0.1875rem);
+}
+
+.button:active {
+    background-color: #0e5a66;
+    transform: translateY(0.0625rem);
+}
+
+/* Animasi muncul dari bawah */
+.input, .button {
+    transform: translateY(0.625rem);
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards;
+}
+
+/* Delay animasi setiap elemen */
+.input:nth-child(1) { animation-delay: 0.2s; }
+.input:nth-child(2) { animation-delay: 0.4s; }
+.input:nth-child(3) { animation-delay: 0.6s; }
+.button           { animation-delay: 0.8s; }
+
+/* Keyframe animasi fade in */
+@keyframes fadeInUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsif: layar kecil (smartphone) */
+@media (max-width: 768px) {
+    .formWrapper {
+        padding: 2rem;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .input, .button {
+        font-size: 0.875rem;
+    }
+}
+
+/* Responsif: tablet */
+@media (min-width: 769px) and (max-width: 992px) {
+    .formWrapper {
+        padding: 2.5rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .input, .button {
+        font-size: 0.9375rem;
+    }
+}
+
+/* Responsif: layar besar (desktop) */
+@media (min-width: 992px) {
+    .formWrapper {
+        padding: 3rem;
+    }
+
+    .title {
+        font-size: 2.25rem;
+    }
+
+    .input, .button {
+        font-size: 1rem;
+    }
+}

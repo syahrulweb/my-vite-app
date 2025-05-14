@@ -1,0 +1,146 @@
+.active {
+  background-color: #6ac4d6;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1995AD;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Logo + Title */
+.title {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.75rem;
+}
+
+/* Menu List */
+.navList {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.link:hover:not(.active) {
+  background-color: #127b93;
+  color: #fff;
+}
+
+/* Burger Menu */
+.menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.menu span {
+  height: 0.3rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.2rem;
+}
+
+/* === Responsive === */
+/* default: <768px (small/phone) */
+@media (max-width: 767px) {
+  .menu {
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+  }
+
+  .navList {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #1995AD;
+  }
+
+  .navList.open {
+    display: flex;
+  }
+
+  .navList li {
+    text-align: center;
+  }
+
+  .link {
+    margin: 0.25rem auto;
+  }
+}
+
+/* medium: ≥768px (tablet) */
+@media (min-width: 768px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .navList {
+    gap: 1rem;
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+/* large: ≥992px (desktop, laptop, tv) */
+@media (min-width: 992px) {
+  .navbar {
+    padding: 1rem 3rem;
+  }
+
+  .navList {
+    gap: 1.5rem;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+}

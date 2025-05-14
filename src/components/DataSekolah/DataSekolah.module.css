@@ -1,0 +1,149 @@
+/* ===== Container ===== */
+.container {
+  margin: 3rem auto;
+  max-width: 1200px;
+  text-align: center;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+/* ===== Title ===== */
+.title {
+  font-size: 2.5rem;
+  color: #1995AD;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* ===== Subtitle ===== */
+.subtitle {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 3rem;
+}
+
+/* ===== Cards Section ===== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+/* ===== Card Item ===== */
+.card {
+  background: linear-gradient(135deg, #1995AD, #57cfe7);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  flex: 1 1 280px;
+  max-width: 320px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Title */
+.card__title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Card Content (Guru, Siswa, Alumni) */
+.guru, .siswa, .alumni {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fef9c3;
+  margin: 0;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Adjust container padding */
+  .container {
+    padding: 1rem;
+  }
+
+  /* Cards should take full width */
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  /* Adjust text sizes for mobile */
+  .title {
+    font-size: 2rem;
+  }
+
+  .guru, .siswa, .alumni {
+    font-size: 2.5rem;
+  }
+
+  .card__title {
+    font-size: 1.25rem;
+  }
+
+  /* Adjust subtitle font size */
+  .subtitle {
+    font-size: 0.875rem;
+  }
+}
+
+/* Tablet Devices (min-width: 769px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .card {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+
+  .guru, .siswa, .alumni {
+    font-size: 3rem;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .card__title {
+    font-size: 1.4rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Large Screen Devices (min-width: 992px) */
+@media (min-width: 992px) {
+  .card {
+    flex: 1 1 30%;
+    max-width: 30%;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .guru, .siswa, .alumni {
+    font-size: 3.5rem;
+  }
+
+  .card__title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+  }
+}
